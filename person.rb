@@ -29,7 +29,7 @@ class Person < Nameable
   def generate_id
     rand(1000..9999)
   end
-  
+
   def add_rental(rental)
     @rentals << rental
     rental.person = self
