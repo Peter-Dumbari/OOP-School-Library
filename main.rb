@@ -1,36 +1,52 @@
-# Main method
-choice = nil
+require_relative 'app/app'
+class Options
+  def initialize
+    @app = App.new(self)
 
-while choice != 7
-  puts "\n--- Library Management System ---"
-  puts '1. List all books'
-  puts '2. List all people'
-  puts '3. Create a person'
-  puts '4. Create a book'
-  puts '5. Create a rental'
-  puts '6. List rentals for a person'
-  puts '7. Exit'
-  puts 'Enter your choice:'
+    puts
+    puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
+    show_menu
+  end
 
-  choice = gets.chomp.to_i
+  def show_menu
+    puts
+    puts 'Please choose an option by entering a number:'
+    puts '1 -  List all books'
+    puts '2 -  List all people'
+    puts '3 -  Create a person'
+    puts '4 -  Create a book'
+    puts '5 -  Create a rental'
+    puts '6 -  List all rentals for a given person id'
+    puts '7 -  Exit'
+    puts
+    user_choice = gets.chomp
+    select_option(user_choice)
+  end
 
-  case choice
-  when 1
-    puts 'one'
-  when 2
-    puts 'two'
-  when 3
-    puts 'three'
-  when 4
-    puts 'four'
-  when 5
-    puts 'five'
-  when 6
-    puts 'six'
-  when 7
-    puts 'Exiting...'
-    break
-  else
-    puts 'Invalid choice!'
+  def select_option(user_choice)
+    options = {
+      '1' => :list_all_books,
+      '2' => :list_all_people,
+      '3' => :create_person,
+      '4' => :create_book,
+      '5' => :create_rental,
+      '6' => :list_all_rentals,
+      '7' => :exit
+    }
+
+    method = options[user_choice]
+    if method.nil?
+      puts 'Invalid option, please try again!'
+      puts
+      show_menu
+    else
+      @app.send(method)
+    end
   end
 end
+
+def main
+  Options.new
+end
+
+main
