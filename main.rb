@@ -7,11 +7,9 @@ class Options
   end
 
   def display_welcome_message
-
     puts
 
     puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
-
   end
 
   def show_menu
