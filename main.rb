@@ -3,9 +3,17 @@ class Options
   def initialize
     @app = App.new(self)
     show_menu
+    display_welcome_message
   end
 
-  
+  def display_welcome_message
+
+    puts
+
+    puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
+
+  end
+
   def show_menu
     puts
     puts 'Please choose an option by entering a number:'
