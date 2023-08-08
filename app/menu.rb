@@ -8,9 +8,8 @@ class Menu
     show_menu
   end
 
-  def 
-
-  def show_menu
+  def
+  def(_show_menu)
     puts
     puts 'Please choose an option by entering a number:'
     puts '1 -  List all books'

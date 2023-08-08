@@ -18,7 +18,6 @@ class Main
     puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
   end
 
-
   def show_menu
     puts
     puts 'Please choose an option by entering a number:'
