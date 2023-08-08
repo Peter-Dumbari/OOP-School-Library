@@ -2,12 +2,10 @@ require_relative 'app/app'
 class Options
   def initialize
     @app = App.new(self)
-
-    puts
-    puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
     show_menu
   end
 
+  
   def show_menu
     puts
     puts 'Please choose an option by entering a number:'
