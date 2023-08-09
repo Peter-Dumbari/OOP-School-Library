@@ -77,7 +77,7 @@ class Main
 
     person_options = {
       '1' => :create_student,
-      '2' => :create_teache
+      '2' => :create_teacher
     }
 
     method = person_options[person_role]
@@ -98,7 +98,6 @@ class Main
 
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase == 'y'
-    print 'Classroom: '
     @app.add_people_list(Student.new(age, name, parent_permission: parent_permission))
     puts
     puts 'Person created successfully'
