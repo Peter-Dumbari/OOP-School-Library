@@ -12,7 +12,7 @@ class Teacher < Person
 
   def self.from_json(json)
     data = JSON.parse(json)
-    new(data['age'], data['specialization'], data['name'], true)
+    new(data['age'], data['specialization'], data['name'])
   end
 
   def as_json(_options = {})

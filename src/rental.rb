@@ -9,7 +9,7 @@ class Rental
 
   def self.from_json(json)
     data = JSON.parse(json)
-    new(data['date'], data['book'], person: data['person'])
+    new(data['date'], data['book'], data['person'])
   end
 
   def as_json(_options = {})
