@@ -37,13 +37,13 @@ class App
 
   def add_book_list(book)
     @books_list.push(book)
-    @filemanager.filewriter = PersonWriter.new(@books_list)
+    @filemanager.filewriter = BookWriter.new(@books_list)
     @filemanager.create
   end
 
   def add_rental_list(rental)
     @rentals_list.push(rental)
-    @filemanager.filewriter = PersonWriter.new(@rentals_list)
+    @filemanager.filewriter = RentalWriter.new(@rentals_list)
     @filemanager.create
   end
 end

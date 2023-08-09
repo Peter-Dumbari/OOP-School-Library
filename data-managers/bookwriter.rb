@@ -3,7 +3,7 @@ require 'json'
 class BookWriter
   def initialize(book_list)
     @book_list = book_list
-    @file_path = '../data/books.json'
+    @file_path = './data/books.json'
   end
 
   def read
@@ -20,6 +20,6 @@ class BookWriter
   end
 
   def create
-    File.write(@file_path, JSON.generate(@books_list.map(&:as_json)))
+    File.write(@file_path, JSON.generate(@book_list.map(&:as_json)))
   end
 end
