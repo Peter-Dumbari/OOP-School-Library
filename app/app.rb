@@ -47,4 +47,3 @@ class App
     @filemanager.create
   end
 end
-
