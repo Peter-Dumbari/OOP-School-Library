@@ -1,4 +1,4 @@
-require_relative 'app'
+require_relative 'data-manager/loan'
 
 class Menu
   def initialize
@@ -8,8 +8,7 @@ class Menu
     show_menu
   end
 
-  def
-  def(_show_menu)
+  def show_menu
     puts
     puts 'Please choose an option by entering a number:'
     puts '1 -  List all books'

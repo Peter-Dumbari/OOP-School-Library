@@ -93,6 +93,12 @@ Example command:
 - Twitter: [@Peter-Dumbari](https://twitter.com/Lazkkidy)
 - LinkedIn: [Peter-Dumbari](https://www.linkedin.com/in/peterdumbari)
 
+👤 **Deborah Fashoro**
+
+- GitHub: [DebyGrey](https://github.com/DebyGrey)
+- Twitter: [@Deby_grey](https://twitter.com/Deby_grey)
+- LinkedIn: [Deborah Fashoro](https://www.linkedin.com/in/deborah-fashoro)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>..
 
 <!-- FUTURE FEATURES -->

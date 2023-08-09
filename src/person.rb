@@ -1,10 +1,10 @@
 require_relative 'nameable'
 require_relative 'capitalizedecorator'
 require_relative 'trimmerdecorator'
-
+require 'pry'
 class Person < Nameable
   attr_reader :id
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :parent_permission
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -18,6 +18,19 @@ class Person < Nameable
     @name
   end
 
+  def self.from_json(json)
+    data = JSON.parse(json)
+
+    case data['type']
+
+    when 'Student'
+      Student.from_json(json)
+
+    when 'Teacher'
+      Teacher.from_json(json)
+    end
+  end
+
   private
 
   def of_age?
@@ -25,6 +38,6 @@ class Person < Nameable
   end
 
   def generate_id
-    rand(1..1000)
+    rand(0o01..0o60)
   end
 end
