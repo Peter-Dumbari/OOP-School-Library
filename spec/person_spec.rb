@@ -18,7 +18,7 @@ RSpec.describe Person do
       expect(person.age).to eq(age)
       expect(person.parent_permission).to eq(parent_permission)
     end
-
+ 
     it 'generates a valid id' do
       expect(person.id).to be_between(1, 63)
     end
