@@ -13,7 +13,7 @@ class Book
 
   def self.from_json(json)
     data = JSON.parse(json)
-    new(data['name'], data['age'])  # Use 'name' and 'age' instead of 'title' and 'author'
+    new(data['name'], data['age']) # Use 'name' and 'age' instead of 'title' and 'author'
   end
 
   def as_json(_options = {})

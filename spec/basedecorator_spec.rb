@@ -1,4 +1,4 @@
-require_relative '../spec/spec_helper' 
+require_relative '../spec/spec_helper'
 
 RSpec.describe BaseDecorator do
   describe '#correct_name' do
