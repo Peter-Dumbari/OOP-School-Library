@@ -1,5 +1,5 @@
 class Book
-  attr_accessor :date, :title, :author, :rentals
+  attr_accessor :title, :author, :rentals
 
   def initialize(title, author)
     @title = title
@@ -13,7 +13,7 @@ class Book
 
   def self.from_json(json)
     data = JSON.parse(json)
-    new(data['title'], data['author'], data['name'])
+    new(data['name'], data['age'])  # Use 'name' and 'age' instead of 'title' and 'author'
   end
 
   def as_json(_options = {})
