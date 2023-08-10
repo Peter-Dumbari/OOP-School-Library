@@ -1,7 +1,6 @@
 require_relative 'nameable'
 require_relative 'capitalizedecorator'
 require_relative 'trimmerdecorator'
-require 'pry'
 class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age, :parent_permission
